@@ -15,6 +15,12 @@ const userSchema = z.object({
   created_at: z.date(),
 });
 
+const userUpdateSchema = z.object({
+  name: z.string().optional(),
+  email: z.string().optional(),
+  phone: z.number().optional(),
+});
+
 const userListSchema = z.array(userSchema);
 
 const loginScherma = z.object({
@@ -22,4 +28,10 @@ const loginScherma = z.object({
   password: z.string(),
 });
 
-export { userRequestSchema, userSchema, userListSchema, loginScherma };
+export {
+  userRequestSchema,
+  userSchema,
+  userListSchema,
+  userUpdateSchema,
+  loginScherma,
+};

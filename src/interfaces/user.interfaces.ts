@@ -13,9 +13,15 @@ interface IUser {
   created_at: Date;
 }
 
+interface IUserUpdate {
+  name: string;
+  email: string;
+  phone: number;
+}
+
 interface IUserLogin {
   email: string;
   password: string;
 }
 
-export { IUser, IUserRequest, IUserLogin };
+export { IUser, IUserRequest, IUserUpdate, IUserLogin };
