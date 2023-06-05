@@ -10,7 +10,7 @@ const updateUserService = async (data: IUserUpdate, userId: string) => {
     id: userId,
   });
 
-  const validatedData = userUpdateSchema.parse(data);
+  const validatedData: any = userUpdateSchema.parse(data);
 
   const userUpdated = userRepository.create({
     ...user,
